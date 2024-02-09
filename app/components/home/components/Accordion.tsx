@@ -9,6 +9,8 @@ import MuiAccordionSummary, {
 } from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import IconExpand from "/public/IconExpand.svg";
+import Image from "next/image";
 
 // accordion
 const Accordion = styled((props: AccordionProps) => (
@@ -28,7 +30,12 @@ const Accordion = styled((props: AccordionProps) => (
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
 	<MuiAccordionSummary
 		expandIcon={
-			<img src="/IconExpand.svg" height="40px" width="40px"></img>
+			<Image
+				src={IconExpand}
+				height={40}
+				width={40}
+				alt="Expand Icon"
+			></Image>
 		}
 		{...props}
 	/>
