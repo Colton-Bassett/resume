@@ -9,7 +9,7 @@ import MuiAccordionSummary, {
 } from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import IconExpand from "/public/IconExpand.svg";
+import IconExpand from "/public/iconExpand.svg";
 import Image from "next/image";
 
 // accordion
