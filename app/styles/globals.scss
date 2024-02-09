@@ -1,0 +1,102 @@
+@use "./variables.scss";
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-text-color: #5f6368;
+	--secondary-text-color: #202124;
+	--tertiary-text-color: #3c4043;
+	--light-grey-background: #f8f9fa;
+	--link-color: #0b57d0;
+	--light-grey: #dadce0;
+	--blue: #1967d2;
+	--red: #c5221f;
+	--green: #188038;
+	--dark-green: #157632;
+	--border-radius-l: 100px;
+	--border-radius-m: 40px;
+	--border-radius-s: 30px;
+	--border-radius-xs: 20px;
+}
+
+html,
+body {
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+	font-family: system-ui, sans-serif;
+	scroll-behavior: smooth !important;
+}
+
+header {
+	min-height: 64px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h1 {
+	margin: 0;
+
+	font-size: 68px;
+	line-height: 1.3em;
+	font-weight: 400;
+	/* letter-spacing: 1px; */
+	color: var(--secondary-text-color);
+
+	@include variables.max-width(variables.$breakpoint-desktop) {
+		font-size: 60px;
+	}
+
+	@include variables.max-width(variables.$breakpoint-tablet) {
+		font-size: 6vw;
+	}
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		font-size: 10vw;
+	}
+}
+
+h2 {
+	margin: 0;
+
+	font-size: 3rem;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 0.5px;
+	color: var(--secondary-text-color);
+
+	@include variables.max-width(variables.$breakpoint-tablet) {
+		font-size: 2.5rem;
+	}
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		font-size: 1.75rem;
+	}
+}
+
+h3 {
+	margin: 0;
+
+	font-size: 36px;
+	font-weight: 500;
+	color: var(--secondary-text-color);
+}
+
+h4 {
+	margin: 0;
+	font-size: 1.5rem;
+	color: var(--secondary-text-color);
+	font-weight: 400;
+}
+
+h5 {
+	font-size: 1.25rem;
+	color: var(--secondary-text-color);
+	font-weight: 400;
+	margin: 0;
+}

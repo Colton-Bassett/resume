@@ -1,0 +1,107 @@
+/* MODAL */
+
+.ctaMedium {
+	margin: 0 15px 0 15px;
+	padding: 16px 22px 16px 22px;
+
+	border: 1px solid var(--light-grey);
+	border-radius: var(--border-radius-s);
+	background-color: #fff;
+	font-size: 16px;
+	color: var(--green);
+	cursor: pointer;
+	transition: box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+.ctaMedium:hover {
+	transition-delay: 0.1s;
+	border-color: var(--green);
+	background-color: var(--light-grey-background);
+}
+
+.modalContainer {
+}
+
+.modalHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px;
+	background: var(--light-grey-background);
+	border-bottom: 1px solid var(--light-grey);
+	font-weight: 500;
+	font-size: 28px;
+}
+.closeButton {
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+}
+
+.modalTableWrapper {
+	overflow-x: auto;
+}
+
+.modalTable {
+	width: 100%;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	color: var(--secondary-text-color);
+}
+
+.modalTable thead tr {
+	border: 1px solid var(--light-grey);
+	border-width: 0 0 1px;
+}
+
+table.modalTable tbody tr:nth-child(even) {
+	background-color: rgba(32, 33, 36, 0.03);
+}
+
+table.modalTable td {
+	padding: 24px 24px;
+}
+
+.tdText {
+	display: flex;
+	align-items: center;
+	min-height: 30px;
+}
+
+table.modalTable tr > td:not(:first-child) {
+	padding-left: 0px;
+}
+
+table.modalTable td p {
+	margin: 0px 0px;
+
+	font-weight: 400;
+	font-size: 14px;
+	color: var(--primary-text-color);
+}
+
+table.modalTable td:first-child {
+	font-weight: 500;
+}
+
+.modalHeadline {
+	padding: 24px 0px;
+	padding-right: 24px;
+
+	text-align: left;
+	font-size: 32px;
+	color: var(--secondary-text-color);
+	font-weight: 500;
+}
+
+.modalHeadlineSubtext {
+	margin: 6px 0px;
+
+	font-size: 14px;
+	color: var(--primary-text-color);
+}
+
+.done {
+	height: 30px;
+	width: 30px;
+}

@@ -1,0 +1,195 @@
+@use "../styles/variables.scss";
+
+.aboutContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 8px 8px;
+	scroll-margin-top: 64px;
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	max-width: 1600px;
+	padding: 0 80px;
+
+	@include variables.max-width(variables.$breakpoint-desktop) {
+		max-width: 1440px;
+		padding: 0;
+	}
+}
+
+.spacer {
+	@extend .spacer;
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		margin: 0;
+	}
+}
+
+.hero {
+	display: grid;
+	grid-column-gap: 24px;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	align-items: center;
+	padding: 0 0 60px 0;
+
+	@include variables.max-width(variables.$breakpoint-tablet) {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+
+.heading {
+	grid-column: 1 / span 6;
+	max-width: 95%;
+
+	@include variables.max-width(variables.$breakpoint-tablet) {
+		margin-top: 60px;
+	}
+}
+
+.headingMini {
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px;
+	color: var(--primary-text-color);
+}
+
+.subheadingMini {
+	margin: 0;
+	margin-top: 20px;
+	font-style: italic;
+	letter-spacing: 1px;
+	font-size: 14px;
+	color: var(--primary-text-color);
+}
+
+.headingText {
+	font-size: 60px;
+
+	@include variables.max-width(variables.$breakpoint-desktop) {
+		font-size: 52px;
+	}
+
+	@include variables.max-width(variables.$breakpoint-tablet) {
+		font-size: 42px;
+	}
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		font-size: 10vw;
+	}
+}
+
+.description {
+	margin-top: 16px;
+
+	font-size: 1.5rem;
+	color: var(--primary-text-color);
+
+	@include variables.max-width(variables.$breakpoint-desktop) {
+		font-size: 1.25rem;
+	}
+}
+
+.media {
+	grid-column: 7 / span 6;
+}
+
+.headingImage {
+	height: auto;
+	max-width: 100%;
+
+	border-radius: var(--border-radius-m);
+}
+
+.profiles {
+	background-color: var(--light-grey-background);
+	border-radius: var(--border-radius-m);
+	margin: 120px 0 120px 0;
+
+	@include variables.max-width(variables.$breakpoint-tablet) {
+		margin: 60px 0;
+	}
+}
+
+.profile {
+	display: grid;
+	grid-column-gap: 24px;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	align-items: center;
+	max-width: 1296px;
+	margin: auto;
+	padding: 60px 60px;
+
+	@include variables.max-width(variables.$breakpoint-tablet) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		padding: 60px 28px;
+	}
+}
+
+.profile:nth-child(2) {
+	@include variables.max-width(variables.$breakpoint-tablet) {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+
+.profileTextContainer {
+	grid-column: 8 / -1;
+	max-width: 95%;
+}
+
+.profileMedia {
+	grid-column: 1 / 7;
+}
+
+.profile .headingMini {
+	// margin-bottom: 4px;
+}
+
+.profileHeader {
+	line-height: 1.16;
+	font-size: 60px;
+
+	@include variables.max-width(variables.$breakpoint-desktop) {
+		font-size: 52px;
+		margin-top: 60px;
+	}
+
+	@include variables.max-width(variables.$breakpoint-tablet) {
+		font-size: 42px;
+	}
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		font-size: 10vw;
+	}
+}
+
+.profileText {
+	font-size: 1.25rem;
+	color: var(--primary-text-color);
+	margin-top: 16px;
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		font-size: 1rem;
+	}
+}
+
+.profiles .profile:nth-child(2) .profileMedia {
+	grid-column: 7 / -1;
+}
+
+.profiles .profile:nth-child(2) .profileTextContainer {
+	grid-column: 1 / 6;
+}

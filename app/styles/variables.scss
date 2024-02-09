@@ -1,0 +1,29 @@
+$breakpoint-desktop: 1440px;
+$breakpoint-tablet: 1020px;
+$breakpoint-mobile: 600px;
+
+$spacer-desktop: 72px;
+$spacer-tablet: 40px;
+$spacer-mobile: 28px;
+
+@mixin max-width($breakpoint) {
+	@media (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+.spacer {
+	margin: 0;
+
+	@include max-width($breakpoint-desktop) {
+		margin: 0 $spacer-desktop;
+	}
+
+	@include max-width($breakpoint-tablet) {
+		margin: 0 $spacer-tablet;
+	}
+
+	@include max-width($breakpoint-mobile) {
+		margin: 0 $spacer-mobile;
+	}
+}

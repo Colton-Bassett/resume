@@ -1,0 +1,270 @@
+@use "../../styles/variables.scss";
+
+.navContainer {
+	display: flex;
+	position: fixed;
+	top: 0px;
+	z-index: 1000;
+	height: 64px;
+	width: 100%;
+	background-color: white;
+
+	color: var(--primary-text-color);
+	transition: 0.3s ease;
+
+	&.scrolled {
+		box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+			0 1px 3px 1px rgba(60, 64, 67, 0.15);
+	}
+}
+
+.logoContainer {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	height: 64px;
+	margin-left: 20px;
+	margin-right: 20px;
+
+	font-size: 24px;
+	color: var(--secondary-text-color);
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		margin-left: 0px;
+	}
+}
+
+.nav {
+	display: flex;
+	height: 100%;
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		padding: 0;
+	}
+}
+
+.linkList {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+	font-size: 20px;
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		display: none;
+	}
+}
+
+.link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 64px;
+}
+
+.linkSpan {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	border-radius: var(--border-radius-xs);
+	transition: all 0.2s;
+}
+
+.linkSpan:hover {
+	background-color: var(--light-grey-background);
+}
+
+.link.active {
+	border-bottom: 2px solid var(--green);
+}
+
+.link.active:hover span {
+	background-color: transparent;
+}
+
+.end {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 36px;
+
+	text-align: end;
+
+	@include variables.max-width(variables.$breakpoint-desktop) {
+		margin-right: 8px;
+	}
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		margin-right: 16px;
+	}
+}
+
+@mixin schedule-button-style {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 16px 22px;
+	border: none;
+	border-radius: var(--border-radius-s);
+	font-size: 16px;
+	color: white;
+	background-color: var(--green);
+	cursor: pointer;
+	transition: box-shadow 0.1s ease, background-color 0.1s ease;
+
+	&:hover {
+		background-color: var(--dark-green);
+		transition-delay: 0.1s;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.16);
+	}
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		&.scheduleButton {
+			display: none;
+		}
+	}
+}
+
+.scheduleButton,
+.mobileScheduleButton {
+	@include schedule-button-style;
+}
+
+.callButton {
+	display: none;
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		display: flex;
+	}
+}
+
+.callIcon {
+	width: 48px;
+	height: 48px;
+	padding: 12px;
+	border-radius: 50%;
+	transition: all 0.2s;
+	vertical-align: middle;
+}
+
+.callIcon:hover {
+	background-color: var(--light-grey-background);
+}
+
+/* --------------------------- */
+/* MOBILE DRAWER */
+/* --------------------------- */
+
+.mobileDrawer {
+	display: none;
+	align-items: center;
+	height: 100%;
+	margin-left: 10px;
+
+	@include variables.max-width(variables.$breakpoint-mobile) {
+		display: flex;
+	}
+}
+
+.mobileMenuButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 48px;
+	width: 48px;
+
+	background-color: transparent;
+	border: none;
+	border-radius: var(--border-radius-l);
+	cursor: pointer;
+}
+
+.mobileMenuButton:hover {
+	background-color: var(--light-grey-background);
+}
+
+.menuIcon {
+	height: 24px;
+	width: 24px;
+}
+
+.mobileListContainer {
+	margin-top: 8px;
+	padding-bottom: 24px;
+}
+
+.menuOpenButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 48px;
+	width: 48px;
+	margin-bottom: 8px;
+	margin-left: 16px;
+
+	background-color: transparent;
+	border: none;
+	border-radius: var(--border-radius-l);
+	cursor: pointer;
+}
+
+.menuOpenIcon {
+	height: 24px;
+	width: 24px;
+}
+
+.menuOpenButton:hover {
+	background-color: var(--light-grey-background);
+}
+
+.listItemContainer {
+	margin: 0 8px;
+}
+
+.listItemIconContainer {
+	margin-right: 16px;
+}
+
+.listItemIcon {
+	height: 32px;
+	width: 32px;
+	padding: 4px;
+
+	border-radius: 50%;
+	transition: all 0.2s;
+	vertical-align: middle;
+}
+
+.listItem {
+	display: flex;
+	height: 48px;
+	align-items: center;
+	position: relative;
+	padding: 2px 16px;
+
+	border-radius: var(--border-radius-l);
+	overflow: hidden;
+}
+
+.listItem:hover {
+	background-color: var(--light-grey-background);
+}
+
+.mobileMenuScheduleContainer {
+	display: flex;
+	height: 80px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
