@@ -1,8 +1,20 @@
-# Career Coaching Ecommerce Website
+# Ecommerce Website "Resume"
 
-Uses Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+This version of **Resume** is a prototype for an ecommerce website. It serves as a front-end platform aimed at connecting software engineers and tech workers with expert resume services at an affordable rate.
 
-The **Redux Toolkit** is a standardized way to write Redux logic (create actions and reducers, setup the store with some default middlewares like redux devtools extension). This example demonstrates each of these features with Next.js
+**Resume** uses Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+
+The **Redux Toolkit** is a standardized way to write Redux logic (create actions and reducers, setup the store with some default middlewares like redux devtools extension).
+
+## Project Goals
+
+-   Develop a cutting-edge ecommerce website that embodies modern design principles and user experience.
+
+-   Establish a distinctive brand identity by creating a cohesive theme with appropriate fonts, written content for a strong market presence.
+
+-   Acquire proficiency in new technologies and improve existing tech stack including Next.js, SCSS, Vercel deployment, SVG integration, Next.js routing, and Redux state management.
+
+-   Implement a structured and efficient file organization system to enhance code maintainability and scalability.
 
 ## Deployed with
 
