@@ -1,8 +1,8 @@
 # Ecommerce Website "Resume"
 
-This version of **Resume** is a prototype for an ecommerce website. It serves as a front-end platform aimed at connecting software engineers and tech workers with expert resume services at an affordable rate.
+This version of [Resume](https://resume-amber-six.vercel.app) is a prototype for an ecommerce website. It serves as a front-end platform aimed at connecting software engineers and tech workers with expert resume services at an affordable rate.
 
-**Resume** uses Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+[Resume](https://resume-amber-six.vercel.app) uses Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
 
 The **Redux Toolkit** is a standardized way to write Redux logic (create actions and reducers, setup the store with some default middlewares like redux devtools extension).
 
